@@ -3,9 +3,9 @@ name: Deploy DotNet project to Azure Function App
 on:
   push:
     branches:
-      - newfunction
+      - master
     paths:
-      - ".github/workflows/DeployFA.yml" 
+      - ".github/workflows/function.yml" 
       
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
