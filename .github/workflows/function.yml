@@ -13,8 +13,6 @@ on:
 # 1. Set up the following secrets in your repository:
  
  
- 
-#
 # 2. Change these variables for your configuration:
 env:
   AZURE_FUNCTIONAPP_NAME: fa-tsg-aip-app  # set this to your application's name
