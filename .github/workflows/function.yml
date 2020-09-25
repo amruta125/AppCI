@@ -12,7 +12,7 @@ on: push
 # For help, go to https://github.com/Azure/Actions
 #
 # 1. Set up the following secrets in your repository:
-  AZURE_FUNCTIONAPP_PUBLISH_PROFILE : SCM_CREDENTIALS
+#AZURE_FUNCTIONAPP_PUBLISH_PROFILE: "SCM_CREDENTIALS
 #
 # 2. Change these variables for your configuration:
 env:
