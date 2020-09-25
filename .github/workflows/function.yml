@@ -8,7 +8,6 @@ on:
       - ".github/workflows/function.yml" 
    
 
-
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
 #
