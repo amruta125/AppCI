@@ -3,19 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "serviceBusNamespaceName": {
-      "value": "servicebusNsPOC"
+      "value": "sbtsgaipOrderDelivery"
     },
     "serviceBusTopicName": {
-      "value": "topic"
+      "value": "orders"
     },
     "serviceBusSubscriptionName": {
-      "value": "logicapp"
-    },
-    "serviceBusQueueName": {
-      "value": "queuePOC"
+      "value": "bostonOrders"
     },
     "workflows_name": {
-      "value": "DevOpsPOC"
+      "value": "la-tsg-aip-orderdelivery"
     },
     "servicebus_Connection_Name": {
       "value": "servicebus"
