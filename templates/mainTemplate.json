@@ -1,4 +1,4 @@
-{
+x{
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
@@ -117,22 +117,22 @@
                                 "schema": {
                                     "properties": {
                                         "CustomerID": {
-                                            "type": "string"
+                                            "type": "string",
                                         },
                                         "ItemQuantity": {
-                                            "type": "string"
+                                            "type": "string" ,
                                         },
                                         "LocationCode": {
-                                            "type": "string"
+                                            "type": "string",
                                         },
                                         "OrderDate": {
-                                            "type": "string"
+                                            "type": "string",
                                         },
                                         "OrderID": {
-                                            "type": "string"
+                                            "type": "string",
                                         },
                                         "ProductID": {
-                                            "type": "string"
+                                            "type": "string",
                                         }
                                     },
                                     "type": "object"
@@ -170,8 +170,9 @@
             "value": {
               "servicebus": {
                 "id": "[concat(subscription().id, '/providers/Microsoft.Web/locations/',resourceGroup().location, '/managedApis/', 'servicebus')]",
-                "connectionId": "[resourceId('Microsoft.Web/connections', parameters('servicebus_Connection_Name'))]",
-                "connectionName": "[parameters('servicebus_Connection_Name')]"
+                "connectionName": "servicebus",
+                "connectionId": "[resourceId('Microsoft.Web/connections', parameters('servicebus_Connection_Name'))]"
+                
               }
             }
           }
