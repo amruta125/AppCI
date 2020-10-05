@@ -1,0 +1,51 @@
+  
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "StorageAccountName": {
+            "type": "String",
+            "metadata": {
+                "description": "Storage account name"
+            }
+        },
+        "ContainerName": {
+            "type": "String",
+            "metadata": {
+                "description": "Container name"
+            }
+        },
+        "StorageAccountType": {
+            "type": "String",
+            "metadata": {
+                "description": "Storage Account Type"
+            }
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "apiVersion": "2015-01-01",
+            "type": "Microsoft.Resources/deployments",
+            "name": "nestedTemplate",
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "https://raw.githubusercontent.com/amruta125/storageccount/main/newstorage.json",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "StorageAccountName": {
+                        "value": "[parameters('StorageAccountName')]"
+                    },
+                    "ContainerName":{
+                         "value": "[parameters('ContainerName')]"
+                    },
+                     "StorageAccountType": {
+                         "value": "[parameters('StorageAccountType')]"
+                    }
+                }
+            }
+        }
+      ]
+    }
