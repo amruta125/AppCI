@@ -4,19 +4,19 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "StorageAccountName": {
-            "type": "String",
+            "type": "string",
             "metadata": {
                 "description": "Storage account name"
             }
         },
         "ContainerName": {
-            "type": "String",
+            "type": "string",
             "metadata": {
                 "description": "Container name"
             }
         },
         "StorageAccountType": {
-            "type": "String",
+            "type": "string",
             "metadata": {
                 "description": "Storage Account Type"
             }
